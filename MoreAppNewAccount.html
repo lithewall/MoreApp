@@ -1,0 +1,1207 @@
+<html>
+    
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        
+        <style>
+            body {
+                padding: 0; /* Gets rid of the automatic padding */
+                margin: 0;	/*	on HTML documents */
+                font-family: Lucida Grande, Helvetica, Arial, sans-serif;
+                font-size: 12px;
+            }
+        
+        #navigation {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #ffffff;
+            height: 35px;
+            text-align: left;
+            padding-top: 15px;
+            /* Adds shadow to the bottom of the bar */
+            -webkit-box-shadow: 0px 0px 8px 0px #000000;
+            -moz-box-shadow: 0px 0px 8px 0px #000000;
+            box-shadow: 0px 0px 8px 0px #000000;
+            /* Adds the transparent background */
+            background-color: rgba(1, 1, 1, 0.8);
+            color: rgba(1, 1, 1, 0.8);
+            z-index:99999;
+        }
+        
+        #navigation a {
+            font-size: 14px;
+            padding-left: 10px;
+            padding-right: 5px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        #navigation a:hover {
+            color: grey;
+        }
+        
+        /* This just adds some style to the placeholder text */
+        
+        #content {
+            padding-top: 70px;
+            padding-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /** Reset **/
+        
+        html{color:#000;background:#f2f2f2;}
+        
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+        
+        table{border-collapse:collapse;border-spacing:0;}
+        
+        fieldset,img{border:0;}
+        
+        address,caption,cite,code,dfn,em,strong,th,var,optgroup,i{font-style:inherit;font-weight:inherit;}
+        
+        del,ins{text-decoration:none;}
+        
+        li{list-style:none;}
+        
+        caption,th{text-align:left;}
+        
+        h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+        
+        q:before,q:after{content:'';}
+        
+        abbr,acronym{border:0;font-variant:normal;}
+        
+        sup{vertical-align:baseline;}
+        
+        sub{vertical-align:baseline;}
+        
+        legend{color:#000;}
+        
+        input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;outline:none}
+        
+        /** Style 1.8
+         
+         body { background: #fff;color: #808080;font-size: 14px;font-family: Segoe UI,Arial,Geneva,sans-serif;
+         
+         line-height: 1.4;-webkit-text-size-adjust: none;-webkit-font-smoothing: subpixel-antialiased;-webkit-overflow-scrolling: touch;
+         
+         }*/
+        
+        .division {overflow: hidden;
+            
+        }.content {border-top: 1px solid #dfdfdf;
+            
+        }.loading {padding: 13px 0;border-top: 1px solid #fff;background: #f2f2f2;width: 100%;
+            
+        }.none {display: none!important;
+            
+        }
+        
+        html {color: #000;background: #f2f2f2;
+            
+        }
+        
+        .content .content-items {position: relative;display: block;overflow: hidden;
+            
+            padding: 10px;border-bottom: 1px solid #e5e5e5;background: #fff;
+            
+            background: -moz-linear-gradient(top,#fff 0,#f8f8f8 100%);
+            
+            background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#fff),color-stop(100%,#f8f8f8));
+            
+            background: -webkit-linear-gradient(top,#fff 0,#f8f8f8 100%);
+            
+            background: -o-linear-gradient(top,#fff 0,#f8f8f8 100%);
+            
+            background: -ms-linear-gradient(top,#fff 0,#f8f8f8 100%);
+            
+            background: linear-gradient(to bottom,#fff 0,#f8f8f8 100%);
+            
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f8f8f8',GradientType=0);
+            
+        }
+        
+        .content .content-items .album-img {float: left;margin-right: 10px;margin-bottom:5px;
+            
+            width:90px;
+            
+            height:90px;
+            
+        }
+        
+        
+        
+        .content .content-items h3{display: block;overflow: hidden;max-height: 41px;font-weight: bold;font-size: 15px;color: #333;
+            
+        }
+        
+        .content .content-items h3{display: block;overflow: hidden;max-height: 41px;font-size: 14px;color: #333;
+            
+        }
+        
+        .content .content-items h4{
+            
+            display: block;overflow: hidden;max-height: 2.7em;  font-size: 13px;
+            
+            color: #555;margin: 0;padding: 0;webkit-margin-before: 0.33em;-webkit-margin-after: 0.33em;
+            
+            -webkit-margin-start: 0px;-webkit-margin-end: 0px;  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+            
+            
+        }
+        
+        .actived a{
+            color:red;
+        }
+        
+        a:hover, a:visited, a:link, a:active{
+            underline:none !important;    text-decoration: none;
+        }
+        .bold{
+            font-size:15px !important;
+            color:#FA6616 !important;
+            /*text-decoration: underline !important;*/
+        }
+        
+            </style>
+        
+        <body>
+            <div id="navigation">
+                <a href="#" class="menugroup bold" onclick="didSelect(0);">Sách Hay</a>
+                <a href="#" class="menugroup" onclick="didSelect(1);">Học Tập</a>
+                <a href="#" class="menugroup" onclick="didSelect(2);">Truyện</a>
+                <a href="#" class="menugroup" onclick="didSelect(3);">Giải Trí</a>
+                <a href="#" class="menugroup" onclick="didSelect(4);">Ảnh</a>
+            </div>
+            <script>
+                var i =1;
+                </script>
+            
+            
+            <div id="content" class="division">
+                
+                <div class="content" id="fnBodyContent">
+                    
+                    <div class="tab-content albums fnRTContent" id="fnRTAlbum">
+                        
+                        
+                        <div id="shouldHidden0" style="display:none">
+                                <a class="content-items">
+                                <img src="https://lh3.googleusercontent.com/-r4BXq3uYnKg/VkPlstCDeAI/AAAAAAAABz8/gPfxreuJmPQ/s128-Ic42/icon175x175.jpeg"  class="album-img">
+                                    <h3><script>document.write(i);i++;</script>) Việt Nam Vô Đối</h3>
+                                    <h4>Là người VN bạn không thể bỏ qua ứng dụng này</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/WpGCIv';" />
+                                    
+                                    </a>
+                            
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-yL29qH1pEac/VXEiWimCkMI/AAAAAAAABAo/ddnZjn71Kys/s180-no/1798694_418860884946063_7780865791640391593_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) 10 Cuốn Sách Hay Nhất Mọi Thời Đại</h3>
+                                    
+                                    <h4>Tổng hợp 10 cuốn sách hay nhất mọi thời đại giúp bạn thay đổi cuộc đời</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='http://goo.gl/KEFKTx';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/M7y2L1';" />
+                                    
+                                    </a>
+                            
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh5.googleusercontent.com/--QlY3Ca34Hw/VXEiIxE9W9I/AAAAAAAAA7Q/FjkuBb-Zhf8/s200-no/10929000_413704335461718_2577277806146119531_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Hạt giống tâm hồn </h3>
+                                    
+                                    <h4>Tập hợp những câu chuyện ý nghĩa, cảm động về tình yêu thương vô bờ bến, nghị lực vươn lên trong cuộc sống, những câu chuyện thay đổi cuộc đời bạn.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='http://goo.gl/W6vPkc';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/x0CxXm';" />
+                                    </a>
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-NoilRfDd3zc/VXEiGc_IFjI/AAAAAAAAA6k/ziaUXWObMGU/s180-no/10671408_456458171186334_3855062383383526385_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Những cuốn sách "bị cấm" hay nhất (17+)</h3>
+                                    
+                                    <h4>Tổng hợp những cuốn sách hay nhất gây tranh cãi</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/Iom7Yq';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/ZGzZ9V';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/6dKR1k">
+                                
+                                <img src="https://lh6.googleusercontent.com/-1XOuVa-g5TU/VXEiMYHq45I/AAAAAAAABBk/FsphNHravGM/s180-no/10983428_421194431379375_8793534472377271697_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Sách Tâm Lý Giới Tính "Phải Đọc"</h3>
+                                    
+                                    <h4>Tìm hiểu nhu cầu tâm lý, tâm lý bạn trai, bạn gái, nghệ thuật thấu hiểu tâm lý để đạt được những điều bạn muốn.</h4>
+                                    
+                                    <form action="http://goo.gl/6dKR1k">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-q6-mtVqWUeE/VXEiV4omiFI/AAAAAAAABAE/IPzn84Hh9lU/s180-no/1604636_421195251379293_5337268065161272816_n.jpg"  class="album-img">
+                                    
+                                    <h3>1<script>document.write(i);i++;</script>) Tủ Sách Danh Nhân Thế Giới</h3>
+                                    
+                                    <h4>Danh nhân thế giới thành công như thế nào. Mời các bạn cùng khám phá</h4>
+                                    
+                                    <form action="http://goo.gl/3EC934">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/38lVFr">
+                                
+                                <img src="https://lh4.googleusercontent.com/-XklLkVqBXds/VXEiVbGiovI/AAAAAAAABAM/SPDgMqgjkl0/s180-no/1504523_421194901379328_7121608696621722139_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Nghệ Thuật Giao Tiếp Thành Công</h3>
+                                    
+                                    <h4>Bạn đã biết cách giao tiếp chưa? Có những điều tưởng chừng đơn giản nhưng bạn lại luôn mắc sai lầm.</h4>
+                                    
+                                    <form action="http://goo.gl/38lVFr">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/WdNqN1">
+                                
+                                <img src="https://lh4.googleusercontent.com/-3ZyDu3Sa2IM/VXEiLKCZVbI/AAAAAAAAA8Q/Fe5Q6K0HSC8/s300-no/10959554_420094441489374_1728659994629888816_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Kho Truyện Cổ Đặc Sắc Thế Giới</h3>
+                                    
+                                    <h4>Ứng dụng tập hợp hàng trăm truyện trong kho tàng truyện cổ tích thế giới</h4>
+                                    
+                                    <form action="http://goo.gl/WdNqN1">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-PBYaKF0Ogn8/VXEiN0mSgbI/AAAAAAAAA9U/0Ik5Nu3UpCU/s180-no/11038248_430182977147187_1588267084442909017_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Khoa Học Vui - Bách Khoa Tri Thức Nhân Loại</h3>
+                                    
+                                    <h4>Những khoa học vui, kỳ bí của nhân loại.</h4>
+                                    
+                                    <form action="http://goo.gl/J4XLgG">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-DTioyAoLGkc/VXEiKwt7R-I/AAAAAAAAA8E/G8lkuwY4l1Q/s180-no/10958083_421195131379305_7683629520577196903_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Truyện Cười Đặc Sắc Năm Châu</h3>
+                                    
+                                    <h4>Cười rung rốn với các câu chuyện cười đặc sắc năm châu.</h4>
+                                    
+                                    <form action="http://goo.gl/jo8kSX">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh4.googleusercontent.com/-uY-5UyVQXQA/VXEr7hzf28I/AAAAAAAABB8/9SXyX2prwi4/s180-no/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Bộ Sách Nhân Tướng Học</h3>
+                                    
+                                    <h4>Tử Vi là một môn khoa học Thần Bí, là một môn Dự Đóan Học để Dự Đoán cho tương lai.</h4>
+                                    
+                                    <form action="http://goo.gl/nfHZDS">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh4.googleusercontent.com/-Wq3_5HQ3qu8/VXEiTuku1hI/AAAAAAAAA_Y/xwCTG8QiCvc/s180-no/13696_421195211379297_41284584310750072_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Tiểu thuyết tình yêu chọn lọc</h3>
+                                    
+                                    <h4>Những tác phẩm kinh điển, câu chuyện cảm động nhất, triết lý sống, yêu...</h4>
+                                    
+                                    <form action="http://goo.gl/7J5L4L">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh4.googleusercontent.com/-fxYT4nICSOo/VXEiIClg8iI/AAAAAAAABBA/5uxKzGk4XIM/s180-no/10897877_420002834831868_5048259304242982234_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Việt Nam: Lịch Sử Và Giai Thoại</h3>
+                                    
+                                    <h4>Tổng hợp các cuốn sách dễ hiểu về Lịch Sử hào hùng của dân tộc ta</h4>
+                                    
+                                    <form action="http://goo.gl/mLFJxt">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-dPK1w8mDWXA/VXEiGHaevbI/AAAAAAAAA6Y/3pQObnQIUbo/s300-no/10505517_420002588165226_5935125079677843808_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Sherlock Holmes Trọn Bộ</h3>
+                                    
+                                    <h4>Trọn Bộ những cuốn sách về Sherlock Holmes</h4>
+                                    
+                                    <form action="http://goo.gl/DhLIlU">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-XnUjd-wM-mc/VXEiUVfMIcI/AAAAAAAABAI/wgT0DKVs4VM/s180-no/1487431_420496061449212_3028996837338381260_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Truyện Ngắn Hội Nhà Văn Việt Nam</h3>
+                                    
+                                    <h4>Ứng dụng tổng hợp các tác phẩm hay, tiêu biểu thời kỳ phát triển.</h4>
+                                    
+                                    <form action="http://goo.gl/4v7FUe">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-wHU7lte756E/VXEiUFE1c-I/AAAAAAAABAQ/EEjNY6xBQzk/s894-no/13697_421197324712419_7450356867609016755_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) 1001 Câu Chuyện Cảm Động</h3>
+                                    
+                                    <h4>Tổng hợp các câu chuyện xung quanh vấn đề tình yêu, gia đình, bạn bè, tình người, những điều để chúng ta suy ngẫm.</h4>
+                                    
+                                    <form action="http://goo.gl/mWvRzn">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="http://a2.mzstatic.com/us/r30/Purple4/v4/47/b5/d2/47b5d222-08be-53ab-c413-9e1313b5ec24/icon175x175.jpeg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Đại Tướng Võ Nguyên Giáp</h3>
+                                    
+                                    <h4>Những tác phẩm của Đại Tướng và tác phẩm nói về Người</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/iTN94n';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/iTN94n';" />
+                                    
+                                    </a>
+                            
+                        </div>
+                        
+                        <div id="shouldHidden1" style="display:block">
+                            <script>
+                                i=1;
+                                </script>
+                            <a class="content-items">
+                                <img src="https://lh3.googleusercontent.com/-lL7AYSKuue4/VbB42338byI/AAAAAAAABTo/it7qcb06CE8/s180-Ic42/Icon_180.png"  class="album-img">
+                                    <h3><script>document.write(i);i++;</script>) Ted Talks VN</h3>
+                                    <h4>Ý tưởng nhỏ thay đổi cuộc sống của bạn, thay đổi bạn và thế giới</h4>
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/3YOOG5';" />
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-OR8JFIXAvzk/Vf9zEKUfLLI/AAAAAAAABqM/Qktego1LYl0/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Dạy trẻ thông minh khỏe mạnh</h3>
+                                    
+                                    <h4>Hướng dẫn chăm sóc, dạy dỗ trẻ để trẻ phát triển toàn diện </h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/6FuK8P';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-l82TpcxLYrY/Vf9zHIIwP6I/AAAAAAAABqU/b1KYdeL_FgI/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Tổng hợp kỹ năng sống</h3>
+                                    
+                                    <h4>Kỹ năng cần thiết thế kỷ 21 để sống hạnh phúc, thành công: tiếp nhận thông tin, định hướng, đọc sách, vượt qua khó khăn... </h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/gSOGzJ';" />
+                                    
+                                    </a>
+                            
+                            
+                            
+                            
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-A3J-2QAc1Ok/VbB4owpbYSI/AAAAAAAABS4/6MGFLanHX8k/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Học Tiếng Anh Qua Videos</h3>
+                                    
+                                    <h4>Luyện 4 kỹ năng hàng ngày để tiếng anh của bạn thật chuẩn và Pro</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/vmKz0L';" />
+                                    
+                                    </a>
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-hA6gfj_uNBw/VbB4r0Tim4I/AAAAAAAABTA/HuC6YjDz_QY/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Món Ngon</h3>
+                                    
+                                    <h4>Giúp bạn nấu ăn ngon hơn mỗi ngày</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/Pm4vOj';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/gm3Epk">
+                                
+                                <img src="https://lh4.googleusercontent.com/-vSl7VOO3wMA/VXEiEYDUDPI/AAAAAAAABBA/s-4P8x9Sifo/s180-no/10406990_455794737919344_2260372899848501422_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Doremon Truyện Ngắn Tiếng Anh</h3>
+                                    
+                                    <h4>Truyện Ngắn Doremon Dành Cho Những Ai Yêu Tiếng Anh.</h4>
+                                    
+                                    <form action="http://goo.gl/gm3Epk">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/reS1jF">
+                                
+                                <img src="https://lh4.googleusercontent.com/-4YPs597_ISU/VXEiNMDmitI/AAAAAAAABBA/n5stx8Kc3-0/s180-no/10986948_421194501379368_5675810936497368854_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Doremon Truyện Dài Tiếng Anh</h3>
+                                    
+                                    <h4>Truyện Dài Doremon Dành Cho Những Ai Yêu Tiếng Anh.</h4>
+                                    
+                                    <form action="http://goo.gl/reS1jF">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-HElIiZIME5E/VXEi8rWS5FI/AAAAAAAABBk/-Hpp-OxQtA0/s120-Ic42/10422280_447392998759518_2885060917078094887_n-2.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Hoạt Hình Doremon-Tiếng Anh</h3>
+                                    
+                                    <h4>Xem Phim Hoạt Hình Bằng Tiếng Anh.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/ITg1gM';" />
+                                    
+                                    </a>
+                        </div>
+                        
+                        <div id="shouldHidden2" style="display:none">
+                            <script>
+                                i=1;
+                                </script>
+                            <a class="content-items">
+                                <img src="https://lh3.googleusercontent.com/-r4BXq3uYnKg/VkPlstCDeAI/AAAAAAAABz8/gPfxreuJmPQ/s128-Ic42/icon175x175.jpeg"  class="album-img">
+                                    <h3><script>document.write(i);i++;</script>) Việt Nam Vô Đối</h3>
+                                    <h4>Là người VN bạn không thể bỏ qua ứng dụng này</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/WpGCIv';" />
+                                    
+                                    </a>
+                            <a class="content-items" href="https://goo.gl/A5IGLK">
+                                
+                                <img src="https://lh3.googleusercontent.com/-ry1Jt5oSI7c/VfRPMUMCH5I/AAAAAAAABos/iOPZC0DODNw/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Shin cậu bé bút chì Offline</h3>
+                                    
+                                    <h4>Cập nhật mới nhất bộ truyện cực hài về chú nhóc 5 tuổi Shin</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/A5IGLK';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/4RGPZR">
+                                
+                                <img src="https://lh3.googleusercontent.com/-17HqscuDJCY/VfRPPhRYJuI/AAAAAAAABo8/4y6M0O6p_pY/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Trạng Quỳnh-Trạng Quỷnh Offline</h3>
+                                    
+                                    <h4><B>HAY HƠN CẢ "THẦN ĐỒNG ĐẤT VIỆT"</B></h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/4RGPZR';" />
+                                    
+                                    </a>
+                            
+                            
+                            
+                            <a class="content-items" href="https://goo.gl/SoeqQt">
+                                
+                                <img src="https://lh3.googleusercontent.com/-csxObRxQcos/VfRO_r_jjgI/AAAAAAAABn8/h7u--oAk-sE/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Thám tử lừng danh Conan Offline</h3>
+                                    
+                                    <h4>Update Chap mới nhất, đọc offline theo yêu cầu của các bạn</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/SoeqQt';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/TuAV0Y">
+                                
+                                <img src="https://lh3.googleusercontent.com/-PMLMk0hpKI8/VXBR43uLVwI/AAAAAAAAA2A/A4GtaaXp52o/s180/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Thần Đồng Đất Việt Offline</h3>
+                                    
+                                    <h4>Trạng Tý của làng Phan Thị đã giúp mọi người xử lý các tình huống hóc búa một cách hài hước...</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/TuAV0Y';" />
+                                    
+                                    </a>
+                            
+                            
+                            <a class="content-items" href="https://goo.gl/G5nVKj">
+                                
+                                <img src="https://lh3.googleusercontent.com/-rLc1OZ7H2N8/VfRPK8ziJBI/AAAAAAAABok/sDOyRKvGmVg/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Nữ Hoàng Ai Cập Offline</h3>
+                                    
+                                    <h4>Cập nhật mới nhất và đầy đủ nhất, bản đẹp, dung lượng nhỏ nhất.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/G5nVKj';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/MzaFJ4">
+                                
+                                <img src="https://lh3.googleusercontent.com/-LHao8Gvg4MY/VfRPFMthBTI/AAAAAAAABoM/RooZ_GwBLf4/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Asari Tinh nghịch Offline</h3>
+                                    
+                                    <h4>Top truyện tranh dành cho thiếu nhi hay nhất</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/MzaFJ4';" />
+                                    
+                                    </a>
+                            
+                            
+                            <a class="content-items" href="https://goo.gl/vAE2p9">
+                                
+                                <img src="https://lh3.googleusercontent.com/-KfR_HTFCSsY/VfROsNrvyiI/AAAAAAAABnM/eL7loesmvFQ/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Chú Thoòng Offline</h3>
+                                    
+                                    <h4>Bộ truyện tranh đình đám nhất Trung Quốc</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/vAE2p9';" />
+                                    
+                                    </a>
+                            
+                            
+                            
+                            
+                            <a class="content-items" href="https://goo.gl/2ZVDUP">
+                                
+                                <img src="https://lh3.googleusercontent.com/-JBEwXo3PFgo/VfRPGcYmg9I/AAAAAAAABoU/7zUhW_7uxyQ/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Con nhà Giàu Offline</h3>
+                                    
+                                    <h4>Bộ truyện nổi tiếng bán chạy nhất thể loại shōjo, được chuyển thể thành phim tại nhiều quốc gia</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/2ZVDUP';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/Syk7XJ">
+                                
+                                <img src="https://lh3.googleusercontent.com/-_eLkpEX77hU/VfRPIGnpoFI/AAAAAAAABoc/4MujBzBH5Rg/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Hội pháp sư (Fairy tail) Offline</h3>
+                                    
+                                    <h4>Hài hước, phép thuật, phiêu lưu. Nói chung là cực kỳ hấp dẫn.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/Syk7XJ';" />
+                                    
+                                    </a>
+                            
+                            
+                            <a class="content-items" href="https://goo.gl/4e4cLz">
+                                
+                                <img src="https://lh3.googleusercontent.com/-KKR2118KrK0/VeT4Kc9-kuI/AAAAAAAABeI/2_7x01AFkLY/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Doremon Truyện Dài Offline</h3>
+                                    
+                                    <h4>Theo yêu cầu Doremon truyện dài của nhiều bạn, chúc các bạn có những cuộc phiêu lưu kỳ thú.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/4e4cLz';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/vVKusH">
+                                
+                                <img src="https://lh3.googleusercontent.com/-6bUf6oRW_7o/VfROwvxhaEI/AAAAAAAABnc/X2OxecTwlL8/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) OnePiece-Đảo Hải Tặc Offline</h3>
+                                    
+                                    <h4>Trọn bộ truyện OnePiece, bản dễ đọc, dung lượng nhẹ nhất</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/vVKusH';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/y3bMUi">
+                                
+                                <img src="https://lh3.googleusercontent.com/-wEr7cuMRwTE/VXEiIT9mOcI/AAAAAAAAA7Y/J57beQAMB-U/s200-no/10917365_413704688795016_1665730297688306333_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Truyện Doremon Trọn Bộ</h3>
+                                    
+                                    <h4>Bạn sẽ tìm thấy những bộ truyện doremon mà mình yêu thích một thời</h4>
+                                    
+                                    <form action="http://goo.gl/y3bMUi">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-kGyURgSofLU/VXBRxdTQE4I/AAAAAAAAA04/ZViaWjiW9Vw/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Naruto P1,2 - Truyện Offline</h3>
+                                    
+                                    <h4>Bộ truyện Naruto Shippuuden được chia làm hai phần đọc offline</h4>
+                                    
+                                    <input type="submit" value="Tải ngay P1" onclick="window.location='https://goo.gl/BZ8KYv';" />
+                                    <input type="submit" value="Tải ngay P2" onclick="window.location='https://goo.gl/PPT7XM';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/YM80iL">
+                                
+                                <img src="https://lh3.googleusercontent.com/CgKpZgARGA8KEk3csV7q0u7bmx7BKTshuaJDK1IyiqQ=s180-no"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Ô Long Viện Offline</h3>
+                                    
+                                    <h4>Bộ truyện nổi tiếng nhất Đài Loan, siêu hài hước.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/YM80iL';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/LVJkUJ">
+                                
+                                <img src="https://lh3.googleusercontent.com/-3wj18YmsMZQ/VXBRsZXRmJI/AAAAAAAAA0I/5CGT2UdelyE/s180/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Bảy Viên Ngọc Rồng Offline</h3>
+                                    
+                                    <h4>Bảy viên ngọc rồng chứa đựng một bí mật có thể triệu hồi một con rồng và ban điều ước cho ai sở hữu chúng...</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/LVJkUJ';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-Tt5SjzTKnXI/VXBRwhOHanI/AAAAAAAAA0w/-r2xd8vWt3A/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Itto(Jindo) Cơn Lốc Sân Cỏ - Truyện Offline</h3>
+                                    
+                                    <h4>Phần 1 của bộ truyện Itto(Jindo)</h4>
+                                    
+                                    <input type="submit" value="Tải ngay" onclick="window.location='https://goo.gl/zBovsl';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-_M7a2lB6kSU/VXBR2fz3VII/AAAAAAAAA1o/wol2Sj7A5rc/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Siêu Quậy Teppi - Truyện Offline</h3>
+                                    
+                                    <h4>1 trong những bộ truyện tranh nổi tiếng của Nhật du nhập vào Việt Nam</h4>
+                                    
+                                    <input type="submit" value="Tải ngay" onclick="window.location='https://goo.gl/cZfj2C';" />
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-D5ys7pPQVcQ/VXBR8xoBPLI/AAAAAAAAA2g/EJf1y9xbkUA/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Yaiba - Truyện Offline</h3>
+                                    
+                                    <h4>Đọc Offline bộ truyện Yaiba</h4>
+                                    
+                                    <input type="submit" value="Tải ngay" onclick="window.location='https://goo.gl/76ziDb';" />
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-qoFKK3Sf1p8/VXBR1USE5yI/AAAAAAAAA1g/K5S61UjnOM8/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phong Vân P1,2 - Truyện Offline</h3>
+                                    
+                                    <h4>Bộ Truyện tranh huyền thoại được yêu thích của Trung Quốc</h4>
+                                    
+                                    <input type="submit" value="Tải ngay P1" onclick="window.location='https://goo.gl/Xvw2sR';" />
+                                    <input type="submit" value="Tải ngay P2" onclick="window.location='https://goo.gl/NI0WoY';" />
+                                    
+                                    </a>
+                            <a class="content-items" href="https://goo.gl/ufqsgZ">
+                                
+                                <img src="https://lh3.googleusercontent.com/-l5UPEBn9JEc/VXBR8PqwVSI/AAAAAAAAA2c/Tt12tXGZdVg/s180/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Vua Trò Chơi HD Offline</h3>
+                                    
+                                    <h4>[Truyện HD]Câu chuyện kể về Yugi Muto, một học sinh trường Domino. Tính tình nhút nhát, hiền lành. Cậu là cháu nội của Surodoku Muto...</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/ufqsgZ';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/Jan3Yg">
+                                
+                                <img src="https://lh3.googleusercontent.com/-Gou6h_rbNUQ/VXBRtwC_p_I/AAAAAAAAA0Y/7wZpy7lSzHU/s180/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Dấu Ấn Rồng Thiêng Offline</h3>
+                                    
+                                    <h4>Câu chuyện là hành trình của Dai và những đồng đội, những học trò của người anh hùng Avan đi tiêu diệt ác ma vì chính nghĩa...</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/Jan3Yg';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/kzFlfz">
+                                
+                                <img src="https://lh3.googleusercontent.com/-g_F2D0WzsS0/VYzJbxtoGQI/AAAAAAAABCg/mhLEaIv5LBg/s180/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iTruyen - Đọc Truyện Online</h3>
+                                    
+                                    <h4>Đọc truyện online với tốc độ đọc Offline.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/kzFlfz';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/jZBYXR">
+                                
+                                <img src="https://lh3.googleusercontent.com/-W9thLgzBD1A/VXBRq7iDFmI/AAAAAAAAAz4/6l2QEXCxQMU/s180/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Nhà Trọ Hoàn Hảo Offline</h3>
+                                    
+                                    <h4>Top truyện tranh Nhật Bản tình cảm lãng mạn và có chút hài hước ...</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/jZBYXR';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/j32RC9">
+                                
+                                <img src="https://lh3.googleusercontent.com/-862XDe0LpTU/VXBRrihXFnI/AAAAAAAAA0E/Nb5LyJEH6tQ/s180/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) 100% Perfect Girl Offline</h3>
+                                    
+                                    <h4>Top truyện tranh Nhật Bản tình cảm lãng mạn và có chút hài hước ...</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/j32RC9';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/3tzZxM">
+                                
+                                <img src="https://lh3.googleusercontent.com/-ww3wNfy0v1I/VXBR58u81JI/AAAAAAAAA2I/76jORuT2s00/s180/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Tình Đầu Dành Hết Cho Em Offline</h3>
+                                    
+                                    <h4>Top truyện tranh Nhật Bản tình cảm lãng mạn và có chút hài hước...</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/3tzZxM';" />
+                                    
+                                    </a>
+                            <a class="content-items" href="http://goo.gl/gm3Epk">
+                                
+                                <img src="https://lh4.googleusercontent.com/-vSl7VOO3wMA/VXEiEYDUDPI/AAAAAAAABBA/s-4P8x9Sifo/s180-no/10406990_455794737919344_2260372899848501422_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Doremon Truyện Ngắn Tiếng Anh</h3>
+                                    
+                                    <h4>Truyện Ngắn Doremon Dành Cho Những Ai Yêu Tiếng Anh.</h4>
+                                    
+                                    <form action="http://goo.gl/gm3Epk">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/reS1jF">
+                                
+                                <img src="https://lh4.googleusercontent.com/-4YPs597_ISU/VXEiNMDmitI/AAAAAAAABBA/n5stx8Kc3-0/s180-no/10986948_421194501379368_5675810936497368854_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Doremon Truyện Dài Tiếng Anh</h3>
+                                    
+                                    <h4>Truyện Dài Doremon Dành Cho Những Ai Yêu Tiếng Anh.</h4>
+                                    
+                                    <form action="http://goo.gl/reS1jF">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    </a>
+                        </div>
+                        
+                        <div id="shouldHidden3" style="display:none">
+                            <script>
+                                i=1;
+                                </script>
+                            <a class="content-items">
+                                <img src="https://lh3.googleusercontent.com/-r4BXq3uYnKg/VkPlstCDeAI/AAAAAAAABz8/gPfxreuJmPQ/s128-Ic42/icon175x175.jpeg"  class="album-img">
+                                    <h3><script>document.write(i);i++;</script>) Việt Nam Vô Đối</h3>
+                                    <h4>Là người VN bạn không thể bỏ qua ứng dụng này</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/WpGCIv';" />
+                                    
+                                    </a>
+                            
+                            
+                            <a class="content-items" href="http://goo.gl/pM0jDZ">
+                                
+                                <img src="https://lh3.googleusercontent.com/-wWU53FeNF3w/VXEiJehYdhI/AAAAAAAAA7k/q5iuEUJQRHo/s200-no/10940604_413704332128385_3443694932816008720_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Hoạt Hình Doremon</h3>
+                                    
+                                    <h4>Tuyển tập những bộ phim hoạt hình HD về chú mèo máy doremon.</h4>
+                                    <form action="http://goo.gl/pM0jDZ">
+                                        <input type="submit" value="Tải Ngay">
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-HElIiZIME5E/VXEi8rWS5FI/AAAAAAAABBk/-Hpp-OxQtA0/s120-Ic42/10422280_447392998759518_2885060917078094887_n-2.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Hoạt Hình Doremon-Tiếng Anh</h3>
+                                    
+                                    <h4>Xem Phim Hoạt Hình Bằng Tiếng Anh.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/ITg1gM';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/ldPsuZ">
+                                
+                                <img src="https://lh3.googleusercontent.com/-g8XJNmTKzbs/VgEUrFz1J5I/AAAAAAAABq4/TBLl1dkmfOQ/s128-Ic42/icon100x100%252520%2525281%252529.jpeg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim hoạt hình dành cho thiếu nhi</h3>
+                                    
+                                    <h4>Tây Du Ký, 12 con giáp, Doremon, Tom và Jerry, Nhóc Maruko...</h4>
+                                    
+                                    <form action="https://goo.gl/ldPsuZ">
+                                        <input type="submit" value="Tải Ngay">
+                                            </form>
+                                    </a>
+                            <a class="content-items" href="https://goo.gl/fo0jJT">
+                                
+                                <img src="https://lh3.googleusercontent.com/-kcecUFAviig/Vfy138L1NwI/AAAAAAAABp8/1pVVqKjAGNI/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Truyện Cổ tích Việt Nam</h3>
+                                    
+                                    <h4>Phim hoạt hình, phim truyện, kể chuyện cổ tích cho thiếu nhi. Món quà trung thu cho gia đình bạn</h4>
+                                    
+                                    <form action="https://goo.gl/fo0jJT">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            </form>
+                                    </a>
+                            
+                            
+                            
+                            <a class="content-items" href="https://goo.gl/YMBnsn">
+                                
+                                <img src="https://lh3.googleusercontent.com/-wkRSreEGIxU/Vfy2A5wC9uI/AAAAAAAABp8/iZ-AO_CUlEs/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Hoạt hình 7 viên ngọc rồng</h3>
+                                    
+                                    <h4>Ly kỳ, hấp dẫn, thú vị hơn cả truyện tranh. Hình ảnh và âm thanh trung thực</h4>
+                                    
+                                    <form action="https://goo.gl/YMBnsn">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            </form>
+                                    
+                                    </a>
+                            
+                            
+                            
+                            
+                            <a class="content-items" href="http://goo.gl/6luLzN">
+                                
+                                <img src="https://lh6.googleusercontent.com/-AI7TfSEi4EA/VXEiFSZdtJI/AAAAAAAABBA/dgLNH0h1utE/s120-no/10468686_421195368045948_4657954117362722845_n.jpg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) VKara - Hát Karaoke Tiếng Việt</h3>
+                                    
+                                    <h4>KHÔNG PHẢI DẠNG VỪA ĐÂU!!!</h4>
+                                    
+                                    <form action="http://goo.gl/6luLzN">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            
+                            <a class="content-items" href="https://goo.gl/s6JknD">
+                                
+                                <img src="https://lh3.googleusercontent.com/-PojQRmCVXgk/VgEUrbkEyKI/AAAAAAAABq4/7-TLMG5Qf0c/s128-Ic42/icon100x100.jpeg"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Korea TVShow-Hot Gameshow Hàn Quốc</h3>
+                                    
+                                    <h4>Tất cả gameshow đình đám nhất xứ sở giải trí châu Á đã có Vietsub!!!</h4>
+                                    
+                                    <form action="https://goo.gl/s6JknD">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/c3jwLV">
+                                
+                                <img src="https://lh3.googleusercontent.com/-XzAcvz3JjTQ/VbB4wEG_ADI/AAAAAAAABTQ/lD2hPdsZrWo/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Quà tặng cuộc sống</h3>
+                                    
+                                    <h4>5 phút sử dụng /ngày giúp bạn sống tích cực mỗi ngày!!!</h4>
+                                    
+                                    <form action="https://goo.gl/c3jwLV">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                           
+                            
+                            
+                            <a class="content-items">
+                                <img src="https://lh3.googleusercontent.com/-6BYIaamofpE/VbB4mdvZCKI/AAAAAAAABSw/8-ABNvZXCQk/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Châu Tinh Trì</h3>
+                                    
+                                    <h4>Xem các bộ Phim Thần Bài, Đỗ Thánh, Tây Du Ký... của Châu Tinh Trì</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/g78TUW';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-kQylzYEvTgo/VbB4t_AvuGI/AAAAAAAABTI/9hz7UM21hpU/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Paris By Night</h3>
+                                    
+                                    <h4>Xem các tập phim Paris By Night Online</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/2AojJA';" />
+                                    
+                                    </a>
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-DE-KDgQqwFQ/VbB41PMUCDI/AAAAAAAABTg/41cGiRw-R-w/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Tây Du Ký</h3>
+                                    
+                                    <h4>Xem các tập của bộ phim Tây Du Ký</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/Us75me';" />
+                                    
+                                    </a>
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-jBs7SCgmmmA/VbB4ynALc1I/AAAAAAAABTY/twzIFxNGmYo/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Tam Quốc Diễn Nghĩa</h3>
+                                    
+                                    <h4>Xem các tập của bộ phim Tam Quốc Diễn Nghĩa</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/WeXhhc';" />
+                                    
+                                    </a>
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-GB82MEh4EF4/VbB4fxAruDI/AAAAAAAABSg/cVxdg0HEo2U/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Camera Công Sở</h3>
+                                    
+                                    <h4>Xem các tập của bộ phim Camera Công Sở</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/2927hS';" />
+                                    
+                                    </a>
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-l3OcEHvauK8/VbB45uwVh8I/AAAAAAAABTw/fSL-vEv3eeY/s180-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Thành Long</h3>
+                                    
+                                    <h4>Xem các bộ Phim nổi tiếng nhất của Thành Long</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/mbcwpt';" />
+                                    
+                                    </a>
+                            
+                            
+                            <a class="content-items" href="https://goo.gl/PLQH5e">
+                                
+                                <img src="https://lh3.googleusercontent.com/-sp5dTcgCuPM/Vg9ncflR-cI/AAAAAAAABsI/dZg0FYKOJ5U/s128-Ic42/Icon_180.png"  class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Đào Vàng 3</h3>
+                                    
+                                    <h4>Phá đảo 200 level game Đào Vàng 3, phiên bản mới 2015!!!</h4>
+                                    
+                                    <form action="https://goo.gl/PLQH5e">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            </form>
+                                    
+                                    </a>
+                            
+                            
+                            
+                        </div>
+                        <div id="shouldHidden4" style="display:none">
+                            <script>
+                                i=1;
+                                </script>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-7odb2wYZNUk/VXB4IImDqXI/AAAAAAAABBk/ZFEeuVx7xho/s128-Ic42/10924763_413704358795049_5642165209026986300_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Pencil Sketch Maker</h3>
+                                    
+                                    <h4>Biến bức ảnh của bạn thành tranh vẽ tuyệt đẹp.</h4>
+                                    
+                                    <input type="submit" value="Tải ngay" onclick="window.location='https://goo.gl/Okf7jS';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-Kda1gm0-DcU/VcJA-c8zrRI/AAAAAAAABbI/PpvXma2PUCY/s152-Ic42/icon76%2525402x.png" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) APhoto-Amazing Photo Editor</h3>
+                                    
+                                    <h4>Công cụ chỉnh sửa ảnh Pro, bạn đã có chưa?.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/DqktQv';" />
+                                    
+                                    </a>
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-zPbiNFHErl8/VXEiKlLNWKI/AAAAAAAAA8A/EiWeNXbHduY/s200-Ic42/10955596_418871581611660_1933445517216969699_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Wefie Stickers</h3>
+                                    
+                                    <h4>Tạo ra những bức ảnh đặc biệt đáng nhớ với hàng ngàn Stickers Free cho bạn.</h4>
+                                    
+                                    <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/eziaR1';" />
+                                    
+                                    </a>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+            
+            <script>
+                
+                
+                function didSelect(selected){
+                    var buttons = document.getElementsByClassName("menugroup");
+                    
+                    for(var id = 0; id < buttons.length; ++id){
+                        if(id==selected){
+                            buttons[id].setAttribute("class", "menugroup bold");
+                            document.getElementById('shouldHidden'+id).style.display = 'block';
+                        }
+                        else{
+                            buttons[id].setAttribute("class", "menugroup");
+                            document.getElementById('shouldHidden'+id).style.display = 'none';
+                        }
+                    }
+                }
+            
+            didSelect(2);
+                </script>
+            
+            
+        </body>
+        
+</html>
